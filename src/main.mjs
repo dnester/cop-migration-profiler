@@ -92,8 +92,7 @@ const askQuestion = (query) => {
 };
 
 
-// Check to see if output directory exists.  If not, 
-// Create it for the user
+/* Check to see if output directory exists.  If not, Create it for the user */
 
 const ensureOutputDirectoryExists = async () => {
   try {
@@ -112,9 +111,9 @@ const fetchApplicationsWithAuth = async () => {
   try {
     await ensureOutputDirectoryExists();
 
-    // 
-    // Check if applicationsList.json already exists
-    // 
+    
+  /* Check if applicationsList.json already exists */
+    
 
     let fileExists = false;
     try {
