@@ -91,6 +91,10 @@ const askQuestion = (query) => {
   return new Promise((resolve) => rl.question(query, resolve));
 };
 
+
+// Check to see if output directory exists.  If not, 
+// Create it for the user
+
 const ensureOutputDirectoryExists = async () => {
   try {
     await fs.access(outputDirectory);
@@ -108,7 +112,10 @@ const fetchApplicationsWithAuth = async () => {
   try {
     await ensureOutputDirectoryExists();
 
+    // 
     // Check if applicationsList.json already exists
+    // 
+
     let fileExists = false;
     try {
       await fs.access(applicationsListPath);
@@ -130,7 +137,12 @@ const fetchApplicationsWithAuth = async () => {
       console.log('Existing applicationsList.json file deleted.');
     }
 
+
+    // 
     // Check if applicationsList.csv already exists
+    // 
+
+
     fileExists = false;
     try {
       await fs.access(applicationsCsvPath);
@@ -160,7 +172,10 @@ const fetchApplicationsWithAuth = async () => {
       throw new Error('Missing required configuration properties.');
     }
 
-    // Replace {customer} placeholder in URLs
+    //
+    // Replace customer placeholder in URLs.  Be sure to check the config.json file if this needs
+    // to be updated
+
     const authUrl = config.authUrlTemplate.replace('{customer}', config.customer);
     const authUrlV2 = config.authUrlV2Template.replace('{customer}', config.customer);
     const applicationsUrlTemplate = config.applicationsUrlTemplate.replace('{customer}', config.customer);
@@ -207,13 +222,12 @@ const fetchApplicationsWithAuth = async () => {
     }
 
     console.log('Sending authentication request...');
-    // Request to retrieve JWT token
     const authResponse = await axios.request(authConfig);
     console.log('Authentication response received:', authResponse.status, authResponse.statusText);
 
-    let token;
 
-    // Extract the token from the set-cookie header or response body
+
+    let token;
     const setCookieHeader = authResponse.headers['set-cookie'];
     if (setCookieHeader) {
       const tokenCookie = setCookieHeader.find(cookie => cookie.startsWith('access_token='));
@@ -230,13 +244,20 @@ const fetchApplicationsWithAuth = async () => {
       throw new Error('No access token found in the response.');
     }
 
-    // Initialize variables for pagination
+    // Initialize variables for pagination.  if you want to update pagination, please
+    // check the COP documenation before proceeding.  This should work for almost 
+    // all needs.
+
+    
     let offset = 0;
     const limit = 25;
     let allApplications = [];
     let moreApplications = true;
 
-    // Loop to fetch all applications with pagination
+    //
+    // Loop to fetch all applications with pagination.  Polaris likes pagination.
+    //
+
     while (moreApplications) {
       const applicationsUrlWithPagination = `${baseApplicationsUrl}?page[limit]=${limit}&page[offset]=${offset}`;
 
