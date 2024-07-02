@@ -248,14 +248,14 @@ const fetchApplicationsWithAuth = async () => {
     // check the COP documenation before proceeding.  This should work for almost 
     // all needs.
 
-    
+
     let offset = 0;
     const limit = 25;
     let allApplications = [];
     let moreApplications = true;
 
     //
-    // Loop to fetch all applications with pagination.  Polaris likes pagination.
+    //  Loop to fetch all applications with pagination.  Polaris likes pagination.
     //
 
     while (moreApplications) {
@@ -300,10 +300,12 @@ const fetchApplicationsWithAuth = async () => {
     const jsonContent = JSON.stringify(allApplications, null, 2);
 
     // Write JSON content to file
+
     await fs.writeFile(applicationsListPath, jsonContent, 'utf8');
     console.log('Applications list has been saved to applicationsList.json');
 
-    // Prepare data for CSV with a unique line for each project
+   /* Prepare data for CSV with a unique line for each project */
+
     let csvData = [];
     allApplications.forEach(application => {
       application.projects.forEach(project => {
