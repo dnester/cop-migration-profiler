@@ -22,6 +22,7 @@
  *                  - getProjectBranches
  *                  - getProjectProperties:  
  *                  - getProjectUserInformation
+ * 
  *                  - setProjectProperties: Optional, this script will set key/value pairs for each project.
  *                    Once the scripts have been executed, the output will create a json file which you may 
  *                    then set key/value pairs.  The setProjectProperties will post the key/value pairs to the
