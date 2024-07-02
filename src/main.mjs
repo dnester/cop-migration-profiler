@@ -810,6 +810,12 @@ const associateProjectsToBranches = async (allProjects, allBranches) => {
   }
 };
 
+
+/* 
+ *    Main 
+ */
+
+
 const main = async () => {
   const allApplications = await fetchApplicationsWithAuth();
   if (allApplications.length === 0) return;
