@@ -12,10 +12,10 @@ A utility to evaluate the current environment of Coverity on Polaris. The projec
 
 ## Usage
 
-Review the `CONFIG.JSON` file and populate with the appropriate account information. At a minimum, you must set:
+Review the `config.json` file and populate with the appropriate account information. At a minimum, you must set:
 
-1. Customer Tenant (`customer`)
-2. API Token
+1. Customer Tenant (line 2 of the config file.  The tenant name will be the name in the login URL (ex, "https://`DEMO`.polaris.synopsys.com"))
+2. API Token (line 3 of the config file)
 
 Optionally, you can use your `EMAIL` and `PASSWORD` if you do not have access the API KEY.
 
