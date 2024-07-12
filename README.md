@@ -32,8 +32,7 @@ To execute the script, perform the following the following steps:
 
 ## Output
 
-There are multiple output files which are created in both JSON and CSV formats. If running the `main.js` script, `finalProjectDetails.csv` will be created in the output folder.
-
+Once completed, execute `node ./createReport.mjs` which will create the output folder with the final report `finalProjectDetails.csv`
 
 ### Scripts Folder
 
