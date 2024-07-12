@@ -30,13 +30,6 @@ To execute the script, perform the following the following steps:
 
 Once completed, execute `node ./createReport.mjs` which will create the output folder with the final report `finalProjectDetails.csv`
 
-### Scripts Folder
-
-- `getApplicationList`
-- `getProjectBranches`
-- `getProjectProperties`
-- `getProjectUserInformation`
-- `setProjectProperties`: Optional, this script will set key/value pairs for each project. Once the scripts have been executed, the output will create a JSON file which you may then set key/value pairs. The `setProjectProperties` will post the key/value pairs to the projects.
 
 ## Changelog
 
