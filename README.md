@@ -9,10 +9,6 @@ A utility to evaluate the current environment of Coverity on Polaris. The projec
 - Users
 - Groups
 
-The script is offered in two types: via main (all scripts execute) and the individual scripts (located in the scripts folder).
-
-### Main Script
-This will execute all scripts which provides a CSV output which will provide all information described above.
 
 ## Usage
 
