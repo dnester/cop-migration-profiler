@@ -30,11 +30,10 @@ To execute the script, perform the following the following steps:
 
 Once completed, execute `node ./createReport.mjs` which will create the output folder with the final report `finalProjectDetails.csv`
 
-
 ## Changelog
 
 ### May 21, 2024
-<span style="background-color: yellow;">node</span>
+- Initial build
 
 ### May 28, 2024
 - Addition of pulling group information for all users. There are three files created (`grouplist.json`, `userlist.json`, `userlist.csv`)
