@@ -14,6 +14,27 @@ The script is offered in two types: via main (all scripts execute) and the indiv
 ### Main Script
 This will execute all scripts which provides a CSV output which will provide all information described above.
 
+## Usage
+
+Review the `CONFIG.JSON` file and populate with the appropriate account information. At a minimum, you must set:
+
+1. Customer Tenant (`customer`)
+2. API Token
+
+Optionally, you can use your EMAIL and PASSWORD if you do not have access the API KEY.
+
+To execute the script, perform the following the following steps:
+
+1.  cd into the cop-migration-profiler folder
+2.  Run `npm install` to install all of the dependencies
+3.  cd `src` directory
+4.  Run `node ./main.mjs`
+
+## Output
+
+There are multiple output files which are created in both JSON and CSV formats. If running the `main.js` script, `finalProjectDetails.csv` will be created in the output folder.
+
+
 ### Scripts Folder
 
 - `getApplicationList`
@@ -21,19 +42,6 @@ This will execute all scripts which provides a CSV output which will provide all
 - `getProjectProperties`
 - `getProjectUserInformation`
 - `setProjectProperties`: Optional, this script will set key/value pairs for each project. Once the scripts have been executed, the output will create a JSON file which you may then set key/value pairs. The `setProjectProperties` will post the key/value pairs to the projects.
-
-## Usage
-
-Review the `CONFIG.JSON` file and populate with the appropriate account information. At a minimum, you must set:
-
-1. Customer Tenant (`customer`)
-2. Email Address
-3. API Token
-4. Password
-
-## Output
-
-There are multiple output files which are created in both JSON and CSV formats. If running the `main.js` script, `finalProjectDetails.csv` will be created in the output folder.
 
 ## Changelog
 
