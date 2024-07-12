@@ -36,7 +36,7 @@ Once completed, execute `node ./createReport.mjs` which will create the output f
 - Initial build
 
 ### May 28, 2024
-- Addition of pulling group information for all users. There are three files created (`grouplist.json`, `userlist.json`, `userlist.csv`)
+- Addition of pulling group information for all users. There are three files created (`grouplist.json`, `userlist.json`, `branchlist.csv`)
 
 ### July 1, 2024
 - Addition of a main script (entry point) for all-in-one script to complete a full assessment.
