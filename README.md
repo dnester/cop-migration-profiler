@@ -34,7 +34,7 @@ Once completed, execute `node ./createReport.mjs` which will create the output f
 ## Changelog
 
 ### May 21, 2024
-- Initial build
+<span style="background-color: yellow; color: red; padding: 2px 4px; border-radius: 3px;">Intiial</span>
 
 ### May 28, 2024
 - Addition of pulling group information for all users. There are three files created (`grouplist.json`, `userlist.json`, `userlist.csv`)
