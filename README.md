@@ -21,7 +21,7 @@ Review the `CONFIG.JSON` file and populate with the appropriate account informat
 1. Customer Tenant (`customer`)
 2. API Token
 
-Optionally, you can use your EMAIL and PASSWORD if you do not have access the API KEY.
+Optionally, you can use your `EMAIL` and `PASSWORD` if you do not have access the API KEY.
 
 To execute the script, perform the following the following steps:
 
